@@ -13,11 +13,6 @@ public class SpaceInvaders {
            this.longueur = longueur;
            this.hauteur = hauteur;
        }
-        
-      @Override
-        public String toString() {
-            return recupererEspaceJeuDansChaineASCII();
-        }
 
 	public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();
@@ -62,6 +57,10 @@ public class SpaceInvaders {
     
    	public void deplacerVaisseauVersLaDroite() {
         if (vaisseau.getX() < (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+	}
+   	
+   	public void deplacerVaisseauVersLaGauche() {
+        if (vaisseau.getX() > 0) vaisseau.seDeplacerVersLaGauche();
 	}
     
     
