@@ -33,6 +33,7 @@ public class SpaceInvadersTest {
      @Test
         public void test_unNouveauVaisseauEstCorrectementPositionneDansEspaceJeu() {
             spaceinvaders.positionnerUnNouveauVaisseau(7,9);
+            
             assertEquals("" + 
             "...............\n" + 
             "...............\n" +
@@ -46,12 +47,52 @@ public class SpaceInvadersTest {
             ".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
         }
      
+     @Test
+ 	public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
+ 		
+ 		spaceinvaders.positionnerUnNouveauVaisseau(7,9);
+
+ 		spaceinvaders.deplacerVaisseauVersLaDroite();
+ 		
+ 		assertEquals("" + 
+ 		"...............\n" + 
+ 		"...............\n" +
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"........V......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+ 	}
+     
+     @Test
+ 	public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
+ 		
+ 		spaceinvaders.positionnerUnNouveauVaisseau(14,9);
+
+ 		spaceinvaders.deplacerVaisseauVersLaDroite();
+ 		
+ 		assertEquals("" + 
+ 		"...............\n" + 
+ 		"...............\n" +
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"...............\n" + 
+ 		"..............V\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+ 	}
      
      @Test(expected = HorsEspaceJeuException.class)
  	public void test_unNouveauVaisseauEstPositionneHorsEspaceJeuTropEnBas_UneExceptionEstLevee() throws Exception {
  		SpaceInvaders spaceinvaders = new SpaceInvaders(15, 10);
  		spaceinvaders.positionnerUnNouveauVaisseau(14,10);
  	}
+     
      
  	@Test
  	public void test_UnNouveauVaisseauPositionneHorsEspaceJeu_DoitLeverUneException() {

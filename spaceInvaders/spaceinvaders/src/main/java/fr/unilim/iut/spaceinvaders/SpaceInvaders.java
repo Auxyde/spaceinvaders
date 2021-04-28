@@ -60,5 +60,9 @@ public class SpaceInvaders {
 		return ((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur));
 	}
     
-        
+   	public void deplacerVaisseauVersLaDroite() {
+        if (vaisseau.getX() < (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+	}
+    
+    
 }
