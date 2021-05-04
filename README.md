@@ -6,7 +6,7 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 
 ## Diagramme de classe
 
-![S1_DiagrammeDeClasse](/spaceInvades/images/S1_modelUcls.png)
+![S1_DiagrammeDeClasse](/spaceInvaders/images/S1_modelUcls.png)
 
 ## Nuage de mots
 
