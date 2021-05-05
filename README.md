@@ -2,7 +2,16 @@
 
 TP du jeu Space Invaders fait avec la méthode TDD.
 
-# Fonctionnalité 1
+# Sommaire
+
+- [Semaine 1 : 28/04/2021 au 5/05/2021](#Semaine1)
+- [Glossaire](#glossaire)
+
+# Semaine 1 <a id="Semaine1"></a>
+
+## Fonctionnalité 1
+
+### Sprints et fonctionnalités réalisées
 
 - Story n°1.1 : Créer un espace de jeu
   Un espace de jeu est créé aux dimensions données (2D) Cet espace de jeu est vide
@@ -16,18 +25,26 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 - Story n°1.4 : Déplacer le vaisseau vers la gauche dans l'espace de jeu
   Le vaisseau se déplace d'un pas vers la gauche Si le vaisseau se trouve sur la bordure gauche de l'espace de jeu, le vaisseau doit rester immobile (aucun déplacement, aucune exception levée : le vaisseau reste juste à sa position actuelle).
 
-## Diagramme de classe
+### Diagramme de classe
 
 ![S1_DiagrammeDeClasse](/spaceInvaders/images/S1_modelUcls.png)
 
-## Nuage de mots
+### Nuage de mots
 
 ![S1_NuageDeMots](/spaceInvaders/images/S1_CodeWordCloud.png)
 
-# Glossaire
+### Difficultés rencontrées
 
-- Vaisseau : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs.
+Aucune
 
-- Envahisseur : ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
+### Remarques diverses
 
-- Missile : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
+Pour pouvoir, mettre en place les tests, il a été nécessaire d’ajouter une fonctionnalité supplémentaire qui permet de représenter l’espace de jeu dans une chaîne ASCII.
+
+# Glossaire <a   id="glossaire"></a>
+
+- **Vaisseau** : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs.
+
+- **Envahisseur** : ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
+
+- **Missile** : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
