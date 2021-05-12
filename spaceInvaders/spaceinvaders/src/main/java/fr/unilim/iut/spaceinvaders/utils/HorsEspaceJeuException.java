@@ -7,5 +7,6 @@ public class HorsEspaceJeuException extends RuntimeException {
 	    super(message);
     }
     
+    
 
 }

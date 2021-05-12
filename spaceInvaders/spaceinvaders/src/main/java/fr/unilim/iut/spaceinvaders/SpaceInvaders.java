@@ -1,6 +1,6 @@
 package fr.unilim.iut.spaceinvaders;
 
-import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
+import fr.unilim.iut.spaceinvaders.utils.*;
 
 public class SpaceInvaders {
       private static final char MARQUE_VIDE = '.';
@@ -42,26 +42,33 @@ public class SpaceInvaders {
             return MARQUE_VIDE;
     }
 
-	public void positionnerUnNouveauVaisseau(int x, int y) {
-		
-		if (  !estDansEspaceJeu(x, y) )
-			throw new HorsEspaceJeuException("Vous Ãªtes en dehors de l'espace jeu");
-	
-		vaisseau = new Vaisseau(x, y); 
-
-	}
 
 	private boolean estDansEspaceJeu(int x, int y) {
 		return ((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur));
 	}
     
-   	public void deplacerVaisseauVersLaDroite() {
-        if (vaisseau.getX() < (longueur-1)) vaisseau.seDeplacerVersLaDroite();
+	public void deplacerVaisseauVersLaDroite() {
+		if (vaisseau.abscisseLaPlusADroite() < (longueur - 1))
+			vaisseau.seDeplacerVersLaDroite();
 	}
    	
    	public void deplacerVaisseauVersLaGauche() {
-        if (vaisseau.getX() > 0) vaisseau.seDeplacerVersLaGauche();
+        if (vaisseau.abscisseLaPlusAGauche() > 0) vaisseau.seDeplacerVersLaGauche();
 	}
     
+
+	public void positionnerUnNouveauVaisseau(int longueur, int hauteur, int x, int y) {
+		if (!estDansEspaceJeu(x, y))
+			throw new HorsEspaceJeuException("La position du vaisseau est en dehors de l'espace jeu");
+
+		if ( !estDansEspaceJeu(x+longueur-1,y))
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers la droite à cause de sa longueur");
+		if (!estDansEspaceJeu(x,y-hauteur+1))
+			throw new DebordementEspaceJeuException("Le vaisseau déborde de l'espace jeu vers le bas à cause de sa hauteur");
+
+		vaisseau = new Vaisseau(longueur, hauteur);
+		vaisseau.positionner(x, y);
+	}
+	
     
 }
