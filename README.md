@@ -5,7 +5,7 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 # Sommaire
 
 - [Semaine 1 : 28/04/2021 au 5/05/2021](#Semaine1)
-- [Semaine 1 : 5/05/2021 au 12/05/2021](#Semaine2)
+- [Semaine 2 : 5/05/2021 au 12/05/2021](#Semaine2)
 - [Glossaire](#glossaire)
 
 # Semaine 2 <a id="Semaine2"></a>
