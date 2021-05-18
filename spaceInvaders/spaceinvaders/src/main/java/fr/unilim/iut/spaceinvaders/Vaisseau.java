@@ -31,32 +31,36 @@ public class Vaisseau {
     }
 
     private int ordonneeLaPlusBasse() {
-	    return this.origine.ordonnee() - this.dimension.hauteur() + 1;
+	    return this.getOrigine().ordonnee() - this.dimension.hauteur() + 1;
     }
 
     private int ordonneeLaPlusHaute() {
-	   return this.origine.ordonnee();
+	   return this.getOrigine().ordonnee();
    }
 
    public int abscisseLaPlusADroite() {
-	   return this.origine.abscisse() + this.dimension.longueur() - 1;
+	   return this.getOrigine().abscisse() + this.dimension.longueur() - 1;
    }
 
    public int abscisseLaPlusAGauche() {
-	   return this.origine.abscisse();
+	   return this.getOrigine().abscisse();
    }
 
    public void seDeplacerVersLaDroite() {
-	   this.origine.changerAbscisse(this.origine.abscisse() + 1);
+	   this.getOrigine().changerAbscisse(this.getOrigine().abscisse() + 1);
    }
 
    public void seDeplacerVersLaGauche() {
-	   this.origine.changerAbscisse(this.origine.abscisse() - 1);
+	   this.getOrigine().changerAbscisse(this.getOrigine().abscisse() - 1);
    }
 
    public void positionner(int x, int y) {
-	   this.origine.changerAbscisse(x);
-	   this.origine.changerOrdonnee(y);
+	   this.getOrigine().changerAbscisse(x);
+	   this.getOrigine().changerOrdonnee(y);
    }
+
+public Position getOrigine() {
+	return origine;
+}
 
 }

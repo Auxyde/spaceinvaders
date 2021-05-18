@@ -1,8 +1,9 @@
 package fr.unilim.iut.spaceinvaders;
 
 import fr.unilim.iut.spaceinvaders.utils.*;
+import fr.unilim.iut.spaceinvaders.moteurjeu.*;
 
-public class SpaceInvaders {
+public class SpaceInvaders implements Jeu {
       private static final char MARQUE_VIDE = '.';
 	private static final char MARQUE_VAISSEAU = 'V';
 	int longueur;
@@ -75,6 +76,18 @@ public class SpaceInvaders {
 
 		vaisseau = new Vaisseau(longueurVaisseau, hauteurVaisseau);
 		vaisseau.positionner(x, y);
+	}
+
+	@Override
+	public void evoluer(Commande commandeUser) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean etreFini() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

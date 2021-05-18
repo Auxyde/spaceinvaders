@@ -6,22 +6,7 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 
 - [Semaine 1 : 28/04/2021 au 5/05/2021](#Semaine1)
 - [Semaine 2 : 5/05/2021 au 12/05/2021](#Semaine2)
-- [Semaine 3 : 12/05/2021 au 18/05/2021](#Semaine3)
 - [Glossaire](#glossaire)
-
-# Semaine 3 <a id="Semaine3"></a>
-
-## Moteur Graphique
-
-- Ajout du moteur graphique Spike au jeu.
-
-### Diagramme de classe
-
-![S3_DiagrammeDeClasse](/spaceInvaders/images/S3_modelUcls.png)
-
-### Nuage de mots
-
-![S3_NuageDeMots](/spaceInvaders/images/S3_CodeWordCloud.png)
 
 # Semaine 2 <a id="Semaine2"></a>
 
@@ -37,11 +22,11 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 
 ### Diagramme de classe
 
-![S2_DiagrammeDeClasse](/spaceInvaders/images/S2_modelUcls.png)
+![S1_DiagrammeDeClasse](/spaceInvaders/images/S2_modelUcls.png)
 
 ### Nuage de mots
 
-![S2_NuageDeMots](/spaceInvaders/images/S2_CodeWordCloud.png)
+![S1_NuageDeMots](/spaceInvaders/images/S2_CodeWordCloud.png)
 
 ### Difficultés rencontrées
 
