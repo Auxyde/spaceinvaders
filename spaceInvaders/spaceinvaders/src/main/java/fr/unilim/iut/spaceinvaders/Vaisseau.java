@@ -2,8 +2,10 @@ package fr.unilim.iut.spaceinvaders;
 
 public class Vaisseau {
 
-    private Position origine;
-    private Dimension dimension;
+	private Position origine;
+	private Dimension dimension;
+	private int vitesse;
+    
 
     public Vaisseau(int longueur, int hauteur) {
 	    this(longueur, hauteur, 0, 0);
@@ -13,10 +15,15 @@ public class Vaisseau {
 	   this(new Dimension(longueur, hauteur), new Position(x, y));
     }
 
-    public Vaisseau(Dimension dimension, Position positionOrigine) {
-	    this.dimension = dimension;
-	    this.origine = positionOrigine;
-    }
+	public Vaisseau(Dimension dimension, Position positionOrigine) {
+		this(dimension, positionOrigine, 1);
+	}
+   
+	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
+		this.dimension = dimension;
+		this.origine = positionOrigine;
+		this.vitesse = vitesse;
+	}
 
     public boolean occupeLaPosition(int x, int y) {
 	    return estAbscisseCouverte(x) && estOrdonneeCouverte(y);
@@ -30,11 +37,11 @@ public class Vaisseau {
 	   return (abscisseLaPlusAGauche() <= x) && (x <= abscisseLaPlusADroite());
     }
 
-    private int ordonneeLaPlusBasse() {
+    public int ordonneeLaPlusBasse() {
 	    return this.getOrigine().ordonnee() - this.dimension.hauteur() + 1;
     }
 
-    private int ordonneeLaPlusHaute() {
+    public int ordonneeLaPlusHaute() {
 	   return this.getOrigine().ordonnee();
    }
 
@@ -47,20 +54,32 @@ public class Vaisseau {
    }
 
    public void seDeplacerVersLaDroite() {
-	   this.getOrigine().changerAbscisse(this.getOrigine().abscisse() + 1);
-   }
-
+		this.origine.changerAbscisse(this.origine.abscisse() + getVitesse());
+	}
+   
    public void seDeplacerVersLaGauche() {
-	   this.getOrigine().changerAbscisse(this.getOrigine().abscisse() - 1);
-   }
+		this.origine.changerAbscisse(this.origine.abscisse() - getVitesse());
+	}
 
    public void positionner(int x, int y) {
 	   this.getOrigine().changerAbscisse(x);
 	   this.getOrigine().changerOrdonnee(y);
    }
 
-public Position getOrigine() {
-	return origine;
-}
+	public Position getOrigine() {
+		return origine;
+	}
+
+	public int hauteur() {
+		return this.dimension.hauteur();
+	}
+	
+	public int longueur() {
+		return this.dimension.longueur();
+	}
+
+	public int getVitesse() {
+		return vitesse;
+	}
 
 }
