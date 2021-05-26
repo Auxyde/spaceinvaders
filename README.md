@@ -7,7 +7,40 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 - [Semaine 1 : 28/04/2021 au 5/05/2021](#Semaine1)
 - [Semaine 2 : 5/05/2021 au 12/05/2021](#Semaine2)
 - [Semaine 3 : 12/05/2021 au 18/05/2021](#Semaine3)
+- [Semaine 4 : 18/05/2021 au 26/05/2021](#Semaine3)
 - [Glossaire](#glossaire)
+
+# Semaine 4 <a id="Semaine4"></a>
+
+## Fonctionnalité 3
+
+- Sprint n°3.1 : Comprendre ce qu'est la vitesse dans notre application et faire un choix de conception. Définition de la vitesse ajoutée au glossaire.
+- Sprint 2 : Ajouter la vitesse au Vaisseau sans régression de comportement. Ajout de l'attribut vitesse à la classe Vaisseau. Introduction de la vitesse dans le code existant de la classe Vaisseau de manière non-régressive.
+- Sprint 3 : Régler la vitesse du vaisseau. Nouveau constructeur de la classe Vaisseau qui a la signature : Vaisseau(Dimension, Position, int).
+- Sprint 4 : Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque. Refactoring des déplacements permettant d'introduire la vitesse.
+
+## Fonctionnalité 4
+
+- Sprint 4.1 : Comprendre ce qu'est un missile et refactorer (diagramme de classes). Refactoring. Ajout dans la classe mère Sprite du constructeur à 3 paramètres. Appel dans la classe Vaisseau du constructeur de la classe mère (super).
+- Sprint 4.2 : Comprendre ce que signifie tirer un missile depuis le vaisseau. Comprendre la fonctionnalité en imaginant un scénario.
+- Sprint 4.3 : Tirer un missile. Ecrire les tests. Refactoring.
+- Sprint 4.4 : Faire déplacer le missile à la verticale de manière autonome.
+
+### Diagramme de classe
+
+![S4_DiagrammeDeClasse](/spaceInvaders/images/S4_modelUcls.png)
+
+### Nuage de mots
+
+![S4_NuageDeMots](/spaceInvaders/images/S4_CodeWordCloud.png)
+
+## Difficultés rencontrées
+
+Aucune
+
+## Remarque
+
+Aucune
 
 # Semaine 3 <a id="Semaine3"></a>
 
@@ -90,3 +123,5 @@ Pour pouvoir, mettre en place les tests, il a été nécessaire d’ajouter une 
 - **Envahisseur** : ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
 
 - **Missile** : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
+
+- **Vitesse** :

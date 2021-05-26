@@ -1,6 +1,6 @@
 package fr.unilim.iut.spaceinvaders;
 
-public abstract class Sprite {
+public class Sprite {
 
 	protected Position origine;
 	protected Dimension dimension;
