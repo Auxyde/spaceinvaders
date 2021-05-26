@@ -10,7 +10,7 @@ TP du jeu Space Invaders fait avec la méthode TDD.
 - [Semaine 4 : 18/05/2021 au 26/05/2021](#Semaine3)
 - [Glossaire](#glossaire)
 
-# Semaine 4 <a id="Semaine4"></a>
+# Semaine 4 : 18/05/2021 au 26/05/2021<a id="Semaine4"></a>
 
 ## Fonctionnalité 3
 
@@ -42,7 +42,7 @@ Aucune
 
 Aucune
 
-# Semaine 3 <a id="Semaine3"></a>
+# Semaine 3 : 12/05/2021 au 18/05/2021<a id="Semaine3"></a>
 
 ## Moteur Graphique
 
@@ -58,7 +58,7 @@ Aucune
 
 # Semaine 2 <a id="Semaine2"></a>
 
-## Fonctionnalité 2
+## Fonctionnalité 2 5/05/2021 au 12/05/2021
 
 - Sprint n°2.1 : Positionner un nouveau vaisseau avec une dimension donnée. Un nouveau est créé et est positionné avec des coordonnées.
 
@@ -82,7 +82,7 @@ Aucune
 
 ### Sprints et fonctionnalités réalisées
 
-# Semaine 1 <a id="Semaine1"></a>
+# Semaine 1 28/04/2021 au 12/05/2021 <a id="Semaine1"></a>
 
 ## Fonctionnalité 1
 
